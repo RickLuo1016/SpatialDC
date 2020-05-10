@@ -33,7 +33,7 @@
 
 #F0 p, #F1 p,#F2 p, #F3 p{
     position: absolute;
-    left:300px;
+    left:120%;
 
     padding:0;
     width:700px;
@@ -66,7 +66,7 @@
 
 
 #F0:hover, #F1:hover, #F2:hover, #F3:hover{
-    background:linear-gradient(to right, #f1ece4 30%, #454a64) !important;;
+    background:linear-gradient(to right, #f1ece4 30%, #454a6400) !important;;
     color:#454a64 !important;
 }
 
