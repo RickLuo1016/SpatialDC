@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+  margin:0;
+}
+
+body{
+  font-family: 'Abhaya Libre';
+}
+
+.Cover{
+  position:relative;
+  height:250px;
+  padding:0;
+}
+
+.Content{
+  position:relative;
+  padding:0;
+  height:750px;
+}
+
+.Analysis{
+  position:relative;
+  padding:0;
+  height:500px;
+}
+
+.MoreInfo{
+  position:relative;
+  padding:0;
+  height:200px;
+}
+
+
+
+.share-icons {
+  position:fixed;
+  top: 10px;
+  right: 15px;
+  z-index: 30;
+  font-size: 25px;
+}
+
+.share-icons .icon {
+  opacity: 0.4;
+  color: #061224;
+}
+
+.share-icons .icon:hover {
+  opacity: 1;
+}
+
+
+.S1, .S2, .S3{
+  position:absolute;
+  top:7.5px;
+  height:15px;
+  width:120px;
+  text-align:center;
+  color:#454a64;
+  font-weight:900;
+}
+
+
+
+.S1{
+  left:35%;
+}
+
+.S2{
+  left:45%;
+}
+
+.S3{
+  left:55%;
+}
+
+.S1:hover, .S2:hover, .S3:hover{
+  color:#a55407;
+}
+

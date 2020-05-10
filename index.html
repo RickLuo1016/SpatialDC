@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Designate the character set of the page -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<title>Assessment</title>
+
+	<!--Leaflet-->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+		integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+		crossorigin="" />
+	<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+		integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+		crossorigin=""></script>
+
+	<!--Local file-->
+	<link rel='stylesheet' href='./css/Overall.css'>
+	<link rel='stylesheet' href='./css/Content_Feature.css'>
+	<link rel='stylesheet' href='./css/Content_Text.css'>
+	<link rel='stylesheet' href='./css/Content.css'>
+	<link rel='stylesheet' href='./css/Cover.css'>
+	<link rel='stylesheet' href='./css/Analysis.css'>
+	<link rel='stylesheet' href='./css/MoreInfo.css'>
+
+
+
+
+	<!--Font file-->
+	<link href='https://fonts.googleapis.com/css?family=Abhaya Libre' rel='stylesheet'>
+
+	<!-- Load jQuery -->
+	<script type='text/javascript' src='http://code.jquery.com/jquery-1.10.2.min.js?ver=1.10.2'></script>
+
+	<!--Load icon-->
+	<link rel='stylesheet' href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+</head>
+
+<body>
+	<div class="share-icons">
+		<span class="icon" id="twitter">
+			<i class="fab fa-twitter-square"></i>
+		</span>
+		<span class="icon" id="facebook">
+			<i class="fab fa-facebook-square"></i>
+		</span>
+		<span class="icon" id="linkedin">
+			<i class="fab fa-linkedin"></i>
+		</span>
+	</div>
+
+	<div class="Cover">
+		<div id="Moma">
+			<h2>MoMA</h2>
+			<hr />
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget tortor at nunc eleifend
+				convallis quis et risus. Pellentesque pellentesque fermentum lacus, sit amet consectetur tellus
+				semper nec.
+			</p>
+		</div>
+		<div id="Intro">
+			<div class="Layout">
+
+				<div id="F0">
+					<h1>Introduction</h1>
+					<h4>The Design Concepton</h4>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget tortor at nunc eleifend
+						convallis quis et risus. Pellentesque pellentesque fermentum lacus, sit amet consectetur tellus
+						semper nec. Vivamus eu purus eu dolor bibendum varius. Sed in quam nisi. Praesent ut augue
+						lorem. Proin a vehicula erat. Mauris in justo magna. Pellentesque sit amet mattis enim, non
+						dapibus neque. Curabitur at porta nulla, convallis sollicitudin dui. Morbi nisi sapien, auctor
+						vel
+						maximus eget, sodales sed erat. Donec elementum ac enim at tempor. Etiam et euismod velit. Proin
+						tristique erat eget maximus euismod.
+					</p>
+				</div>
+				<div id="F1">
+					<h1>The Quantity</h1>
+					<h4>The Sum of Artworks</h4>
+					<p>
+						Mauris in justo magna. Pellentesque sit amet mattis enim, non
+						dapibus neque. Curabitur at porta nulla, convallis sollicitudin dui. Morbi nisi sapien, auctor
+						vel
+						maximus eget, sodales sed erat. Donec elementum ac enim at tempor. Etiam et euismod velit. Proin
+						tristique erat eget maximus euismod.
+					</p>
+				</div>
+				<div id="F2">
+					<h1>The Collaboration</h4>
+						<h4>The Collaboration between Artists</h4>
+						<p>
+							consectetur adipiscing elit. Vivamus eget tortor at nunc eleifend convallis quis et risus.
+							convallis sollicitudin dui. Morbi nisi sapien, auctor vel
+							maximus eget, sodales sed erat. Donec elementum ac enim at tempor. Etiam et euismod velit.
+							Proin
+							tristique erat eget maximus euismod.
+						</p>
+				</div>
+				<div id="F3">
+					<h1>The Element</h1>
+					<h4>The Color and Object in Artworks</h4>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget tortor at nunc eleifend
+						convallis quis et risus. Pellentesque pellentesque fermentum lacus, sit amet consectetur tellus
+						semper nec. Vivamus eu purus eu dolor bibendum varius. Sed in quam nisi. Praesent ut augue
+						lorem. Proin a vehicula erat.
+					</p>
+				</div>
+
+				<div class="Text">
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="Content">
+		<div class="Trans"></div>
+		<div class="Selector">
+			<div class="S1">The Quantity</div>
+			<div class="S2">The Collaboration</div>
+			<div class="S3">The Element</div>
+		</div>
+		<div class="Feature">
+
+			<div id="Feature1">
+				<h2 class="Title">The Quantity of Art</h2>
+				<div id="Map1"></div>
+				<div class="TimeLine">
+					<label id="time"></label>
+					<input id="slider" type="range" min="1500" max="2010" step="10" value="1500" />
+					<p>Time Line</p>
+				</div>
+
+			</div>
+
+			<div id="Feature2">
+
+				<h2 class="Title">The Collaboration between Artists</h2>
+				<div id="Map2"></div>
+
+			</div>
+
+			<div id="Feature3">
+
+				<h2 class="Title">The Element Detection</h2>
+				<div id="Map3"></div>
+
+			</div>
+		</div>
+
+
+		<div class="Text">
+			<div id="Text1">
+				<h2>The Quantity</h2>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget tortor at nunc eleifend
+					convallis quis et risus. Pellentesque pellentesque fermentum lacus, sit amet consectetur tellus
+					semper nec. Vivamus eu purus eu dolor bibendum varius. Sed in quam nisi. Praesent ut augue lorem.
+					Proin a vehicula erat. Mauris in justo magna. Pellentesque sit amet mattis enim, non dapibus neque.
+					Curabitur at porta nulla, convallis sollicitudin dui. Morbi nisi sapien, auctor vel maximus eget,
+					sodales sed erat. Donec elementum ac enim at tempor. Etiam et euismod velit. Proin tristique erat
+					eget maximus euismod.
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget tortor at nunc eleifend
+					convallis quis et risus. Pellentesque pellentesque fermentum lacus, sit amet consectetur tellus
+					semper nec. Vivamus eu purus eu dolor bibendum varius. Sed in quam nisi. Praesent ut augue lorem.
+					Proin a vehicula erat. Mauris in justo magna. Pellentesque sit amet mattis enim, non dapibus neque.
+					Curabitur at porta nulla, convallis sollicitudin dui. Morbi nisi sapien, auctor vel maximus eget,
+					sodales sed erat. Donec elementum ac enim at tempor. Etiam et euismod velit. Proin tristique erat
+					eget maximus euismod.
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget tortor at nunc eleifend
+					convallis quis et risus. Pellentesque pellentesque fermentum lacus, sit amet consectetur tellus
+					semper nec. Vivamus eu purus eu dolor bibendum varius. Sed in quam nisi. Praesent ut augue lorem.
+					Proin a vehicula erat. Mauris in justo magna. Pellentesque sit amet mattis enim, non dapibus neque.
+					Curabitur at porta nulla, convallis sollicitudin dui. Morbi nisi sapien, auctor vel maximus eget,
+					sodales sed erat. Donec elementum ac enim at tempor. Etiam et euismod velit. Proin tristique erat
+					eget maximus euismod.
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget tortor at nunc eleifend
+					convallis quis et risus. Pellentesque pellentesque fermentum lacus, sit amet consectetur tellus
+					semper nec. Vivamus eu purus eu dolor bibendum varius. Sed in quam nisi. Praesent ut augue lorem.
+					Proin a vehicula erat. Mauris in justo magna. Pellentesque sit amet mattis enim, non dapibus neque.
+					Curabitur at porta nulla, convallis sollicitudin dui. Morbi nisi sapien, auctor vel maximus eget,
+					sodales sed erat. Donec elementum ac enim at tempor. Etiam et euismod velit. Proin tristique erat
+					eget maximus euismod.
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget tortor at nunc eleifend
+					convallis quis et risus. Pellentesque pellentesque fermentum lacus, sit amet consectetur tellus
+					semper nec. Vivamus eu purus eu dolor bibendum varius. Sed in quam nisi. Praesent ut augue lorem.
+					Proin a vehicula erat. Mauris in justo magna. Pellentesque sit amet mattis enim, non dapibus neque.
+					Curabitur at porta nulla, convallis sollicitudin dui. Morbi nisi sapien, auctor vel maximus eget,
+					sodales sed erat. Donec elementum ac enim at tempor. Etiam et euismod velit. Proin tristique erat
+					eget maximus euismod.
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget tortor at nunc eleifend
+					convallis quis et risus. Pellentesque pellentesque fermentum lacus, sit amet consectetur tellus
+					semper nec. Vivamus eu purus eu dolor bibendum varius. Sed in quam nisi. Praesent ut augue lorem.
+					Proin a vehicula erat. Mauris in justo magna. Pellentesque sit amet mattis enim, non dapibus neque.
+					Curabitur at porta nulla, convallis sollicitudin dui. Morbi nisi sapien, auctor vel maximus eget,
+					sodales sed erat. Donec elementum ac enim at tempor. Etiam et euismod velit. Proin tristique erat
+					eget maximus euismod.
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget tortor at nunc eleifend
+					convallis quis et risus. Pellentesque pellentesque fermentum lacus, sit amet consectetur tellus
+					semper nec. Vivamus eu purus eu dolor bibendum varius. Sed in quam nisi. Praesent ut augue lorem.
+					Proin a vehicula erat. Mauris in justo magna. Pellentesque sit amet mattis enim, non dapibus neque.
+					Curabitur at porta nulla, convallis sollicitudin dui. Morbi nisi sapien, auctor vel maximus eget,
+					sodales sed erat. Donec elementum ac enim at tempor. Etiam et euismod velit. Proin tristique erat
+					eget maximus euismod.
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget tortor at nunc eleifend
+					convallis quis et risus. Pellentesque pellentesque fermentum lacus, sit amet consectetur tellus
+					semper nec. Vivamus eu purus eu dolor bibendum varius. Sed in quam nisi. Praesent ut augue lorem.
+					Proin a vehicula erat. Mauris in justo magna. Pellentesque sit amet mattis enim, non dapibus neque.
+					Curabitur at porta nulla, convallis sollicitudin dui. Morbi nisi sapien, auctor vel maximus eget,
+					sodales sed erat. Donec elementum ac enim at tempor. Etiam et euismod velit. Proin tristique erat
+					eget maximus euismod.
+				</p>
+			</div>
+			<div id="Text2">
+				<h2>The Collaboration</h2>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget tortor at nunc eleifend
+					convallis quis et risus. Pellentesque pellentesque fermentum lacus, sit amet consectetur tellus
+					semper nec. Vivamus eu purus eu dolor bibendum varius. Sed in quam nisi. Praesent ut augue lorem.
+					Proin a vehicula erat. Mauris in justo magna. Pellentesque sit amet mattis enim, non dapibus neque.
+					Curabitur at porta nulla, convallis sollicitudin dui. Morbi nisi sapien, auctor vel maximus eget,
+					sodales sed erat. Donec elementum ac enim at tempor. Etiam et euismod velit. Proin tristique erat
+					eget maximus euismod.
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget tortor at nunc eleifend
+					convallis quis et risus. Pellentesque pellentesque fermentum lacus, sit amet consectetur tellus
+					semper nec. Vivamus eu purus eu dolor bibendum varius. Sed in quam nisi. Praesent ut augue lorem.
+					Proin a vehicula erat. Mauris in justo magna. Pellentesque sit amet mattis enim, non dapibus neque.
+					Curabitur at porta nulla, convallis sollicitudin dui. Morbi nisi sapien, auctor vel maximus eget,
+					sodales sed erat. Donec elementum ac enim at tempor. Etiam et euismod velit. Proin tristique erat
+					eget maximus euismod.
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget tortor at nunc eleifend
+					convallis quis et risus. Pellentesque pellentesque fermentum lacus, sit amet consectetur tellus
+					semper nec. Vivamus eu purus eu dolor bibendum varius. Sed in quam nisi. Praesent ut augue lorem.
+					Proin a vehicula erat. Mauris in justo magna. Pellentesque sit amet mattis enim, non dapibus neque.
+					Curabitur at porta nulla, convallis sollicitudin dui. Morbi nisi sapien, auctor vel maximus eget,
+					sodales sed erat. Donec elementum ac enim at tempor. Etiam et euismod velit. Proin tristique erat
+					eget maximus euismod.
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget tortor at nunc eleifend
+					convallis quis et risus. Pellentesque pellentesque fermentum lacus, sit amet consectetur tellus
+					semper nec. Vivamus eu purus eu dolor bibendum varius. Sed in quam nisi. Praesent ut augue lorem.
+					Proin a vehicula erat. Mauris in justo magna. Pellentesque sit amet mattis enim, non dapibus neque.
+					Curabitur at porta nulla, convallis sollicitudin dui. Morbi nisi sapien, auctor vel maximus eget,
+					sodales sed erat. Donec elementum ac enim at tempor. Etiam et euismod velit. Proin tristique erat
+					eget maximus euismod.
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget tortor at nunc eleifend
+					convallis quis et risus. Pellentesque pellentesque fermentum lacus, sit amet consectetur tellus
+					semper nec. Vivamus eu purus eu dolor bibendum varius. Sed in quam nisi. Praesent ut augue lorem.
+					Proin a vehicula erat. Mauris in justo magna. Pellentesque sit amet mattis enim, non dapibus neque.
+					Curabitur at porta nulla, convallis sollicitudin dui. Morbi nisi sapien, auctor vel maximus eget,
+					sodales sed erat. Donec elementum ac enim at tempor. Etiam et euismod velit. Proin tristique erat
+					eget maximus euismod.
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget tortor at nunc eleifend
+					convallis quis et risus. Pellentesque pellentesque fermentum lacus, sit amet consectetur tellus
+					semper nec. Vivamus eu purus eu dolor bibendum varius. Sed in quam nisi. Praesent ut augue lorem.
+					Proin a vehicula erat. Mauris in justo magna. Pellentesque sit amet mattis enim, non dapibus neque.
+					Curabitur at porta nulla, convallis sollicitudin dui. Morbi nisi sapien, auctor vel maximus eget,
+					sodales sed erat. Donec elementum ac enim at tempor. Etiam et euismod velit. Proin tristique erat
+					eget maximus euismod.
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget tortor at nunc eleifend
+					convallis quis et risus. Pellentesque pellentesque fermentum lacus, sit amet consectetur tellus
+					semper nec. Vivamus eu purus eu dolor bibendum varius. Sed in quam nisi. Praesent ut augue lorem.
+					Proin a vehicula erat. Mauris in justo magna. Pellentesque sit amet mattis enim, non dapibus neque.
+					Curabitur at porta nulla, convallis sollicitudin dui. Morbi nisi sapien, auctor vel maximus eget,
+					sodales sed erat. Donec elementum ac enim at tempor. Etiam et euismod velit. Proin tristique erat
+					eget maximus euismod.
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget tortor at nunc eleifend
+					convallis quis et risus. Pellentesque pellentesque fermentum lacus, sit amet consectetur tellus
+					semper nec. Vivamus eu purus eu dolor bibendum varius. Sed in quam nisi. Praesent ut augue lorem.
+					Proin a vehicula erat. Mauris in justo magna. Pellentesque sit amet mattis enim, non dapibus neque.
+					Curabitur at porta nulla, convallis sollicitudin dui. Morbi nisi sapien, auctor vel maximus eget,
+					sodales sed erat. Donec elementum ac enim at tempor. Etiam et euismod velit. Proin tristique erat
+					eget maximus euismod.
+				</p>
+			</div>
+			<div id="Text3">
+				<h2>The Element</h2>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget tortor at nunc eleifend
+					convallis quis et risus. Pellentesque pellentesque fermentum lacus, sit amet consectetur tellus
+					semper nec. Vivamus eu purus eu dolor bibendum varius. Sed in quam nisi. Praesent ut augue lorem.
+					Proin a vehicula erat. Mauris in justo magna. Pellentesque sit amet mattis enim, non dapibus neque.
+					Curabitur at porta nulla, convallis sollicitudin dui. Morbi nisi sapien, auctor vel maximus eget,
+					sodales sed erat. Donec elementum ac enim at tempor. Etiam et euismod velit. Proin tristique erat
+					eget maximus euismod.
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget tortor at nunc eleifend
+					convallis quis et risus. Pellentesque pellentesque fermentum lacus, sit amet consectetur tellus
+					semper nec. Vivamus eu purus eu dolor bibendum varius. Sed in quam nisi. Praesent ut augue lorem.
+					Proin a vehicula erat. Mauris in justo magna. Pellentesque sit amet mattis enim, non dapibus neque.
+					Curabitur at porta nulla, convallis sollicitudin dui. Morbi nisi sapien, auctor vel maximus eget,
+					sodales sed erat. Donec elementum ac enim at tempor. Etiam et euismod velit. Proin tristique erat
+					eget maximus euismod.
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget tortor at nunc eleifend
+					convallis quis et risus. Pellentesque pellentesque fermentum lacus, sit amet consectetur tellus
+					semper nec. Vivamus eu purus eu dolor bibendum varius. Sed in quam nisi. Praesent ut augue lorem.
+					Proin a vehicula erat. Mauris in justo magna. Pellentesque sit amet mattis enim, non dapibus neque.
+					Curabitur at porta nulla, convallis sollicitudin dui. Morbi nisi sapien, auctor vel maximus eget,
+					sodales sed erat. Donec elementum ac enim at tempor. Etiam et euismod velit. Proin tristique erat
+					eget maximus euismod.
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget tortor at nunc eleifend
+					convallis quis et risus. Pellentesque pellentesque fermentum lacus, sit amet consectetur tellus
+					semper nec. Vivamus eu purus eu dolor bibendum varius. Sed in quam nisi. Praesent ut augue lorem.
+					Proin a vehicula erat. Mauris in justo magna. Pellentesque sit amet mattis enim, non dapibus neque.
+					Curabitur at porta nulla, convallis sollicitudin dui. Morbi nisi sapien, auctor vel maximus eget,
+					sodales sed erat. Donec elementum ac enim at tempor. Etiam et euismod velit. Proin tristique erat
+					eget maximus euismod.
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget tortor at nunc eleifend
+					convallis quis et risus. Pellentesque pellentesque fermentum lacus, sit amet consectetur tellus
+					semper nec. Vivamus eu purus eu dolor bibendum varius. Sed in quam nisi. Praesent ut augue lorem.
+					Proin a vehicula erat. Mauris in justo magna. Pellentesque sit amet mattis enim, non dapibus neque.
+					Curabitur at porta nulla, convallis sollicitudin dui. Morbi nisi sapien, auctor vel maximus eget,
+					sodales sed erat. Donec elementum ac enim at tempor. Etiam et euismod velit. Proin tristique erat
+					eget maximus euismod.
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget tortor at nunc eleifend
+					convallis quis et risus. Pellentesque pellentesque fermentum lacus, sit amet consectetur tellus
+					semper nec. Vivamus eu purus eu dolor bibendum varius. Sed in quam nisi. Praesent ut augue lorem.
+					Proin a vehicula erat. Mauris in justo magna. Pellentesque sit amet mattis enim, non dapibus neque.
+					Curabitur at porta nulla, convallis sollicitudin dui. Morbi nisi sapien, auctor vel maximus eget,
+					sodales sed erat. Donec elementum ac enim at tempor. Etiam et euismod velit. Proin tristique erat
+					eget maximus euismod.
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget tortor at nunc eleifend
+					convallis quis et risus. Pellentesque pellentesque fermentum lacus, sit amet consectetur tellus
+					semper nec. Vivamus eu purus eu dolor bibendum varius. Sed in quam nisi. Praesent ut augue lorem.
+					Proin a vehicula erat. Mauris in justo magna. Pellentesque sit amet mattis enim, non dapibus neque.
+					Curabitur at porta nulla, convallis sollicitudin dui. Morbi nisi sapien, auctor vel maximus eget,
+					sodales sed erat. Donec elementum ac enim at tempor. Etiam et euismod velit. Proin tristique erat
+					eget maximus euismod.
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget tortor at nunc eleifend
+					convallis quis et risus. Pellentesque pellentesque fermentum lacus, sit amet consectetur tellus
+					semper nec. Vivamus eu purus eu dolor bibendum varius. Sed in quam nisi. Praesent ut augue lorem.
+					Proin a vehicula erat. Mauris in justo magna. Pellentesque sit amet mattis enim, non dapibus neque.
+					Curabitur at porta nulla, convallis sollicitudin dui. Morbi nisi sapien, auctor vel maximus eget,
+					sodales sed erat. Donec elementum ac enim at tempor. Etiam et euismod velit. Proin tristique erat
+					eget maximus euismod.
+				</p>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="Analysis">
+		<div class="Trans"></div>
+		<div class="Selector">
+			<div class="S1">The Quantity</div>
+			<div class="S2">The Collaboration</div>
+			<div class="S3">The Element</div>
+		</div>
+		
+		<div class="Chart">
+			<div id="Cht1">
+				<h1>Chart--1</h1>
+			</div>
+
+			<div id="Cht2">
+				<h1>Chart--2</h1>
+			</div>
+
+			<div id="Cht3">
+				<h1>Chart--3</h1>
+			</div>
+			
+		</div>
+		<div class="Meth">
+			<div id="Me1">
+				<h1>Methodology</h1>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget tortor at nunc eleifend
+					convallis quis et risus. Pellentesque pellentesque fermentum lacus, sit amet consectetur tellus
+					semper nec. Vivamus eu purus eu dolor bibendum varius. Sed in quam nisi. Praesent ut augue lorem.
+					Proin a vehicula erat. Mauris in justo magna. Pellentesque sit amet mattis enim, non dapibus neque.
+					Curabitur at porta nulla, convallis sollicitudin dui. Morbi nisi sapien, auctor vel maximus eget,
+					sodales sed erat. Donec elementum ac enim at tempor. Etiam et euismod velit. Proin tristique erat
+					eget maximus euismod.
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget tortor at nunc eleifend
+					convallis quis et risus. Pellentesque pellentesque fermentum lacus, sit amet consectetur tellus
+					semper nec. 
+				</p>
+			</div>
+
+			<div id="Me2">
+				<h1>Methodology</h1>
+				<p>
+					purus eu dolor bibendum varius. Sed in quam nisi. Praesent ut augue lorem.
+					Proin a vehicula erat. Mauris in justo magna. Pellentesque sit amet mattis enim, non dapibus neque.
+					Curabitur at porta nulla, convallis sollicitudin dui. Morbi nisi sapien, auctor vel maximus eget,
+					sodales sed erat. Donec elementum ac enim at tempor. Etiam et euismod velit. Proin tristique erat
+					eget maximus euismod.
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget tortor at nunc eleifend
+					convallis quis et risus. Pellentesque pellentesque fermentum lacus, sit amet consectetur tellus
+					semper nec. Vivamus eu purus eu dolor bibendum varius. Sed in quam nisi. Praesent ut augue lorem.
+					Proin a vehicula erat.
+				</p>
+			</div>
+
+			<div id="Me3">
+				<h1>Methodology</h1>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget tortor at nunc eleifend
+					convallis quis et risus. Pellentesque pellentesque fermentum lacus, sit amet consectetur tellus
+					semper nec. Vivamus eu purus eu dolor bibendum varius. Sed in quam nisi. Praesent ut augue lorem.
+					Proin a vehicula erat. 
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget tortor at nunc eleifend
+					convallis quis et risus. Pellentesque pellentesque fermentum lacus, sit amet consectetur tellus
+					semper nec. Vivamus eu purus eu dolor bibendum varius. Sed in quam nisi. Praesent ut augue lorem.
+					Proin a vehicula erat.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="MoreInfo">
+		<div class="Trans"></div>
+		<div class="Selector"></div>
+
+		<div id="Reference">
+			<h1>Reference</h1>
+		</div>
+
+		<div id="Contact">
+			<h1>Contact</h1>
+			<h4>Email: </h4>
+		</br>
+			<h4>Module: </h4>
+			<h4>Date: </h4>
+		</div>
+	</div>
+
+
+	<!--D3-->
+	<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	<!--BaseMap-->
+	<script src='./js/BaseMap.js'></script>
+	<script src="./js/Content_Change.js"></script>
+	<!--BubbleMap-->
+	<!-- <script src='./Assessment/js/Bubble_Map.js'></script> -->
+</body>
+
+</html>
