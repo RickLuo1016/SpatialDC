@@ -16,7 +16,7 @@
     background: transparent;
     color:#f1ece4;
     height: 50px;
-    width:220px;
+    width:20%;
     padding:5px 0 5px 10px;
     outline:none;
 }
@@ -36,7 +36,7 @@
     left:120%;
 
     padding:0;
-    width:700px;
+    width:350%;
     height:235px;
 
     color:#f1ece4;
