@@ -15,11 +15,8 @@
     height:700px;
 }
   
-  
 
-  
-
-#Text1, #Text2, #Text3{
+#Text1, #Text2{
     position:absolute;
     top: 0px;
     height: 700px;
@@ -28,6 +25,8 @@
 }
 
 
-#Text2, #Text3{
+#Text2,#Text3{
     display:none;
 }
+
+

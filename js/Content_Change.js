@@ -1,4 +1,4 @@
-var CoverSL = ["#F0", "#F1", "#F2", "#F3"];
+var CoverSL = ["#F1", "#F2", "#F3"];
 var FeaNum = ["1", "2", "3"];
 // 1. Click on Cover
 
@@ -6,16 +6,16 @@ var FeaNum = ["1", "2", "3"];
 $(document).ready(function () {
     $.each(CoverSL, function (i1, v1) {
         $(v1)[0].addEventListener('click', function () {   // mind the difference of jquery object and dom object
+            
             // the selected
-            $(v1 + " p").css("display", "inline");
-            $(v1).css({ "background": "linear-gradient(to right, #f1ece4 30%, #454a64)", "color": "#454a64" });
+            if (i1 == 1) { CollaborationPlotting() };
+            $(v1).css({ "background": "linear-gradient(to right, #454a6400, #f1ece4 50%, #454a6400)", "color": "#454a64" });
 
 
             // the rest
             $.each($.grep(CoverSL, function (temp) {
                 return temp != v1;
             }), function (i2, v2) {
-                $(v2 + " p").css("display", "none");
                 $(v2).css({ "background": "transparent", "color": "#f1ece4" });
             });
         });
@@ -48,6 +48,7 @@ $(document).ready(function () {
     $.each(FeaNum, function (i1, v1) {
         $("#F" + v1)[0].addEventListener('click', function () {
             // the selected
+            //if (v1 == "3") { setTimeout(waterfallHandler, 300); };
             $("#Feature" + v1).css("display", "block");
             $("#Text" + v1).css("display", "block");
             // the rest
@@ -63,23 +64,23 @@ $(document).ready(function () {
 
 
 
-// 1.4 change analysis
-$(document).ready(function () {
-    $.each(FeaNum, function (i1, v1) {
-        $("#F" + v1)[0].addEventListener('click', function () {
-            // the selected
-            $("#Me" + v1).css("display", "block");
-            $("#Cht" + v1).css("display", "block");
-            // the rest
-            $.each($.grep(FeaNum, function (temp) {
-                return temp != v1;
-            }), function (i2, v2) {
-                $("#Me" + v2).css("display", "none");
-                $("#Cht" + v2).css("display", "none");
-            });
-        });
-    });
-});
+// // 1.4 change analysis
+// $(document).ready(function () {
+//     $.each(FeaNum, function (i1, v1) {
+//         $("#F" + v1)[0].addEventListener('click', function () {
+//             // the selected
+//             $("#Me" + v1).css("display", "block");
+//             $("#Cht" + v1).css("display", "block");
+//             // the rest
+//             $.each($.grep(FeaNum, function (temp) {
+//                 return temp != v1;
+//             }), function (i2, v2) {
+//                 $("#Me" + v2).css("display", "none");
+//                 $("#Cht" + v2).css("display", "none");
+//             });
+//         });
+//     });
+// });
 
 
 
@@ -87,25 +88,25 @@ $(document).ready(function () {
 
 
 
-// Click on Trans 
+// Click on Trans 1
 
 // 2.1 change itself and Cover
 $(document).ready(function () {
-    for (var i = 0; i <= 1; i++) {
+    for (var i = 0; i < 1; i++) {
         $.each(FeaNum, function (i1, v1) {
             document.getElementsByClassName("S" + v1)[i].addEventListener('click', function () {
                 // the selected
+                //if (i1 == 0) { Bubble_Mapping(2000, "All") }else{d3.select("#Map1").select("svg").remove();};
+                if (i1 == 1) { CollaborationPlotting() };
                 $(".S" + v1).css("color", "#a55407");
-                $("#F" + v1 + " p").css("display", "inline");
-                $("#F" + v1).css({ "background": "linear-gradient(to right, #f1ece4 30%, #454a64)", "color": "#454a64" });
+                $("#F" + v1).css({ "background": "linear-gradient(to right, #454a6400, #f1ece4 50%, #454a6400)", "color": "#454a64" });
 
                 // the rest
                 $.each($.grep(FeaNum, function (temp) {
                     return temp != v1;
                 }), function (i2, v2) {
                     $(".S" + v2).css("color", "#454a64");
-                    $("#F" + v2 + " p" + ",#F0 p").css("display", "none");
-                    $("#F" + v2 + ",#F0").css({ "background": "transparent", "color": "#f1ece4" });
+                    $("#F" + v2).css({ "background": "transparent", "color": "#f1ece4" });
                 });
             });
         });
@@ -115,10 +116,11 @@ $(document).ready(function () {
 
 // 2.2 change Content
 $(document).ready(function () {
-    for (var i = 0; i <= 1; i++) {
+    for (var i = 0; i < 1; i++) {
         $.each(FeaNum, function (i1, v1) {
             document.getElementsByClassName("S" + v1)[i].addEventListener('click', function () {
                 // the selected
+                //if (v1 == "3") { setTimeout(waterfallHandler, 300); };
                 $("#Feature" + v1).css("display", "block");
                 $("#Text" + v1).css("display", "block");
                 // the rest
@@ -134,18 +136,24 @@ $(document).ready(function () {
 });
 
 
-// 2.3 change analysis
+// Click on Trans 2
+// 3.1 change itself
 $(document).ready(function () {
-    for (var i = 0; i <= 1; i++) {
+    for (var i = 0; i < 1; i++) {
         $.each(FeaNum, function (i1, v1) {
-            document.getElementsByClassName("S" + v1)[i].addEventListener('click', function () {
+            document.getElementsByClassName("C" + v1)[i].addEventListener('click', function () {
                 // the selected
+                if (i1 == 0) { StreamPlotting(); };
+                
+                if (i1 == 2) { BubblePlotting(); };
+                $(".C" + v1).css("color", "#a55407");
                 $("#Me" + v1).css("display", "block");
                 $("#Cht" + v1).css("display", "block");
                 // the rest
                 $.each($.grep(FeaNum, function (temp) {
                     return temp != v1;
                 }), function (i2, v2) {
+                    $(".C" + v2).css("color", "#454a64")
                     $("#Me" + v2).css("display", "none");
                     $("#Cht" + v2).css("display", "none");
                 });

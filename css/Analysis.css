@@ -66,6 +66,17 @@
     padding:20px 20px 20px 20px;
 }
 
+#Cht1 h1, #Cht2 h1, #Cht3 h1{
+    position: absolute;
+    z-index:20;
+}
+
+#Cht1 p, #Cht2 p, #Cht3 p{
+    position: absolute;
+    top: 55px;
+    z-index:20;
+}
+
 #Cht2, #Cht3{
     display:none;
 }
